@@ -8,6 +8,16 @@ This project applies computer vision techniques to detect and recognize faces fr
 
 ---
 
+## 🛠️ Technologies Used
+
+- Python
+- OpenCV
+- Albumentations
+- scikit-image (HOG)
+- NumPy
+  
+---
+
 ## 📌 Task 1 – Detect All Faces in Images
 
 ### 🔍 1.1 Generating Positive and Negative Examples
@@ -15,6 +25,7 @@ This project applies computer vision techniques to detect and recognize faces fr
 To train shape-based face classifiers, we used frames from the cartoon.
 
 - **Positive samples**:
+  - Faces were manually cropped from training frames and grouped by shape
   - Faces were extracted with a 10px buffer and resized based on aspect ratio:
     - `rectangle_vertical`: (54, 66)
     - `square`: (54, 54)
@@ -80,7 +91,7 @@ Implemented in `RunProject.py` using `get_positive_descriptors(shape)`:
 
 ### 🔍 2.1 Generating Positive & Negative Samples
 
-- Positive examples grouped and resized by character:
+- Faces were manually cropped from training frames and grouped into folders per character
   ```python
   self.character_sizes = {
       'mom': (120, 96),
@@ -130,13 +141,3 @@ data/
   ![Average Precision_DeeDee](grafice_precizie/precizie_medie_deedee.png)
   ![Average Precision_Dad](grafice_precizie/precizie_medie_dad.png)
   ![Average Precision_Mom](grafice_precizie/precizie_medie_mom.png)
-
----
-
-## 🛠️ Technologies Used
-
-- Python
-- OpenCV
-- Albumentations
-- scikit-image (HOG)
-- NumPy
