@@ -25,7 +25,7 @@ This project applies computer vision techniques to detect and recognize faces fr
 To train shape-based face classifiers, we used frames from the cartoon.
 
 - **Positive samples**:
-  - Faces were manually cropped from training frames and grouped by shape
+  - Faces were cropped using annotations with coordinates from training frames and grouped by shape
   - Faces were extracted with a 10px buffer and resized based on aspect ratio:
     - `rectangle_vertical`: (54, 66)
     - `square`: (54, 54)
@@ -91,7 +91,7 @@ Implemented in `RunProject.py` using `get_positive_descriptors(shape)`:
 
 ### 🔍 2.1 Generating Positive & Negative Samples
 
-- Faces were manually cropped from training frames and grouped into folders per character
+- Faces were cropped using the same annotations from **Task 1** and grouped into folders per character
   ```python
   self.character_sizes = {
       'mom': (120, 96),
